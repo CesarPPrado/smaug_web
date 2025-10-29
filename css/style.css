@@ -386,3 +386,132 @@ textarea {
     font-size: 1.2rem;
     margin-top: 10px;
 }
+
+/* ================================================= */
+/* ---- Estilos de la Página de Comunidad ---- */
+/* ================================================= */
+
+/* ---- Sección de Staff ---- */
+.staff-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.staff-card {
+    background-color: var(--color-card-bg);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    border: 1px solid #282828;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.staff-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.staff-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Hace la imagen redonda */
+    border: 3px solid var(--color-accent);
+    margin-bottom: 15px;
+}
+
+.staff-card h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-family: var(--font-epic);
+}
+
+.staff-card .staff-rank {
+    margin: 5px 0 0 0;
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+/* ---- Sección de Acciones y Votaciones ---- */
+.actions-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.action-button {
+    display: block;
+    padding: 20px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.action-button:hover {
+    transform: scale(1.03);
+}
+
+.action-button.discord { background-color: #5865F2; }
+.action-button.twitter { background-color: #1DA1F2; }
+.action-button.vote { background-color: var(--color-accent); }
+
+/* ---- Sección de Creadores de Contenido ---- */
+.creators-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.creator-card {
+    background-color: var(--color-card-bg);
+    border: 1px solid #282828;
+    border-radius: 8px;
+    padding: 25px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+}
+.creator-card h3 {
+    margin-top: 0;
+    color: var(--color-accent);
+    font-family: var(--font-epic);
+}
+.creator-link {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: var(--color-accent);
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+/* ---- Sección de Galería ---- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+    border-radius: 8px;
+    border: 2px solid #333;
+    transition: transform 0.3s ease;
+}
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
