@@ -1,10 +1,14 @@
 /* ---- Variables de Color y Estilos Generales ---- */
 :root {
-    --color-background: #121212; /* Negro profundo */
-    --color-primary-text: #E0E0E0; /* Blanco suave */
-    --color-accent: #FF8C00;      /* Naranja fuego */
-    --color-card-bg: #1E1E1E;    /* Gris oscuro para tarjetas */
+    --color-background: #121212;
+    --color-primary-text: #E0E0E0;
+    --color-accent: #FF8C00;
+    --color-card-bg: #1E1E1E;
     --font-epic: 'Cinzel', serif;
+}
+
+html {
+    scroll-behavior: smooth; /* Para un desplazamiento suave */
 }
 
 body {
@@ -15,15 +19,75 @@ body {
     line-height: 1.6;
 }
 
+/* ================================================= */
+/* ---- NUEVO: Header y Navegación ---- */
+/* ================================================= */
+header {
+    background-color: rgba(18, 18, 18, 0.85); /* Fondo semitransparente */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque para navegadores modernos */
+    border-bottom: 1px solid #282828;
+    position: fixed; /* Lo deja fijo en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Se asegura que esté por encima de todo */
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.nav-logo {
+    color: #FFF;
+    font-family: var(--font-epic);
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    color: var(--color-primary-text);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--color-accent);
+    border-bottom-color: var(--color-accent);
+}
+
+.nav-link.active {
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+
 /* ---- Sección Principal (Hero) con Video de Fondo ---- */
 .hero {
     position: relative;
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    overflow: hidden; /* Evita que el video se desborde */
+    overflow: hidden;
 }
 
 .hero-video {
@@ -35,10 +99,9 @@ body {
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -2; /* Detrás de todo */
+    z-index: -2;
 }
 
-/* Capa oscura sobre el video para que el texto sea legible */
 .hero::before {
     content: '';
     position: absolute;
@@ -103,9 +166,25 @@ body {
     box-shadow: 0 0 20px rgba(255, 140, 0, 0.7);
 }
 
+
 /* ---- Secciones de Contenido Principal ---- */
 main {
     padding: 40px 20px;
+}
+
+/* ---- NUEVO: Estilo para las páginas de contenido ---- */
+.page-content {
+    padding-top: 100px; /* Empuja el contenido para que no quede debajo del header fijo */
+    min-height: calc(100vh - 170px); /* Asegura que el footer llegue al fondo */
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page-content h1 {
+    font-family: var(--font-epic);
+    font-size: 3rem;
+    color: var(--color-accent);
 }
 
 .content-section {
@@ -126,7 +205,7 @@ main {
     display: flex;
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap; /* Para que se adapte en móviles */
+    flex-wrap: wrap;
 }
 
 .mode-card {
@@ -150,6 +229,7 @@ main {
     margin-top: 0;
 }
 
+
 /* ---- Footer ---- */
 footer {
     background-color: #000;
@@ -170,5 +250,14 @@ footer {
     .server-ip-box {
         flex-direction: column;
         gap: 15px;
+    }
+    .nav-container {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+    nav ul {
+        gap: 15px;
+        margin-top: 10px;
     }
 }
