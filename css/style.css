@@ -1,0 +1,174 @@
+/* ---- Variables de Color y Estilos Generales ---- */
+:root {
+    --color-background: #121212; /* Negro profundo */
+    --color-primary-text: #E0E0E0; /* Blanco suave */
+    --color-accent: #FF8C00;      /* Naranja fuego */
+    --color-card-bg: #1E1E1E;    /* Gris oscuro para tarjetas */
+    --font-epic: 'Cinzel', serif;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-primary-text);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ---- Sección Principal (Hero) con Video de Fondo ---- */
+.hero {
+    position: relative;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Evita que el video se desborde */
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -2; /* Detrás de todo */
+}
+
+/* Capa oscura sobre el video para que el texto sea legible */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+.hero-content {
+    padding: 20px;
+}
+
+.server-title {
+    font-family: var(--font-epic);
+    font-size: 5rem;
+    font-weight: 700;
+    color: #FFF;
+    text-shadow: 0 0 15px var(--color-accent);
+    margin: 0;
+}
+
+.server-subtitle {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: var(--color-primary-text);
+}
+
+.server-ip-box {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid var(--color-accent);
+    padding: 15px 25px;
+    margin-top: 40px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 1.2rem;
+}
+
+#server-ip {
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.cta-button {
+    background: linear-gradient(45deg, #FF4500, var(--color-accent));
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-family: var(--font-epic);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.7);
+}
+
+/* ---- Secciones de Contenido Principal ---- */
+main {
+    padding: 40px 20px;
+}
+
+.content-section {
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-family: var(--font-epic);
+    font-size: 2.5rem;
+    color: var(--color-accent);
+    margin-bottom: 20px;
+}
+
+/* ---- Tarjetas de Modalidades de Juego ---- */
+.modes-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Para que se adapte en móviles */
+}
+
+.mode-card {
+    background-color: var(--color-card-bg);
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 30px;
+    width: 350px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.mode-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-accent);
+}
+
+.mode-card h3 {
+    font-family: var(--font-epic);
+    font-size: 1.8rem;
+    color: var(--color-accent);
+    margin-top: 0;
+}
+
+/* ---- Footer ---- */
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* ---- Media Queries para Móviles ---- */
+@media (max-width: 768px) {
+    .server-title {
+        font-size: 3rem;
+    }
+    .server-subtitle {
+        font-size: 1.2rem;
+    }
+    .server-ip-box {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
