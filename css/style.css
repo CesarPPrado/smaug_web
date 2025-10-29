@@ -515,3 +515,23 @@ textarea {
 .gallery-item img:hover {
     transform: scale(1.05);
 }
+
+/* ================================================= */
+/* ---- Estilo para el Botón de Tienda ---- */
+/* ================================================= */
+
+.nav-link-tienda {
+    background-color: var(--color-accent);
+    color: #FFF !important; /* Asegura que el texto sea blanco */
+    font-weight: bold;
+    padding: 8px 15px !important; /* Ajusta el padding para que parezca un botón */
+    border-radius: 5px;
+    border-bottom: none !important; /* Quita el subrayado de hover */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link-tienda:hover {
+    background-color: #FF4500; /* Un naranja más intenso al pasar el ratón */
+    transform: scale(1.05);
+    color: #FFF !important;
+}
