@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte - SmaugMC | Network</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">SmaugMC</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="normativas.html" class="nav-link">Normativas</a></li>
+                    <li><a href="comunidad.html" class="nav-link">Comunidad</a></li>
+                    <li><a href="soporte.html" class="nav-link active">Soporte</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <h1>Centro de Soporte</h1>
+        <p class="page-subtitle">¿Tienes un problema o alguna duda? Rellena el formulario y un miembro del staff te ayudará lo antes posible.</p>
+        
+        <div class="form-container">
+            <form action="https://formspree.io/f/TU_ID_UNICO" method="POST">
+                
+                <div class="form-group">
+                    <label for="username">Tu nombre de usuario en Minecraft:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Tu correo electrónico de contacto:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Asunto:</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Elige un motivo...</option>
+                        <option value="Reportar un bug">Reportar un bug</option>
+                        <option value="Reportar a un jugador">Reportar a un jugador</option>
+                        <option value="Apelar una sanción">Apelar una sanción</option>
+                        <option value="Duda general">Duda general</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <button type="submit" class="cta-button form-submit-button">Enviar Ticket de Soporte</button>
+
+            </form>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 SmaugMC | Network. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
