@@ -535,3 +535,45 @@ textarea {
     transform: scale(1.05);
     color: #FFF !important;
 }
+
+/* ================================================= */
+/* ---- Estilos del Estado del Servidor (Hero) ---- */
+/* ================================================= */
+#server-status-container {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.status-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-right: 12px;
+    display: inline-block;
+}
+
+.status-dot.loading {
+    background-color: #f39c12; /* Naranja/Ámbar mientras carga */
+    animation: pulse 1.5s infinite;
+}
+
+.status-dot.online {
+    background-color: #2ecc71; /* Verde */
+}
+
+.status-dot.offline {
+    background-color: #e74c3c; /* Rojo */
+}
+
+/* Animación de pulso para el estado 'loading' */
+@keyframes pulse {
+    0% { transform: scale(0.9); opacity: 0.7; }
+    50% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0.9); opacity: 0.7; }
+}

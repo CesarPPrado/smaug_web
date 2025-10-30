@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmaugMC | Network - Forja tu Leyenda</title>
+    <title>Smaug | Network - Forja tu Leyenda</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,7 @@
 
     <header>
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">SmaugMC</a>
+            <a href="index.html" class="nav-logo">Smaug</a>
             <nav>
                 <ul>
                     <li><a href="index.html" class="nav-link active">Inicio</a></li>
@@ -32,11 +32,16 @@
             Tu navegador no soporta el video de fondo.
         </video>
         <div class="hero-content">
-            <h1 class="server-title">SmaugMC | Network</h1>
+            <h1 class="server-title">Smaug | Network</h1>
             <p class="server-subtitle">Donde las leyendas nacen del fuego y la aventura.</p>
             <div class="server-ip-box">
                 <span id="server-ip">mc.smaugmc.com</span>
-                <button class="cta-button" onclick="copyIp()">COPIAR IP</button>
+                <button class="cta-button" id="copyIpBtn">COPIAR IP</button>
+            </div>
+
+        <div id="server-status-container">
+            <span class="status-dot loading"></span>
+            <span id="status-text">Cargando estado del servidor...</span>
             </div>
         </div>
     </section>
@@ -45,7 +50,7 @@
         <section id="about" class="content-section">
             <h2>Bienvenido a tu Nuevo Reino</h2>
             <p>
-                En las tierras de SmaugMC, cada bloque es una oportunidad y cada jugador un héroe en potencia. 
+                En las tierras de Smaug, cada bloque es una oportunidad y cada jugador un héroe en potencia. 
                 Nacimos de la pasión por Minecraft, creando un universo donde la comunidad es la pieza central.
                 Explora, construye, lucha y sobrevive en un mundo diseñado para ofrecerte desafíos constantes y
                 recompensas legendarias. ¿Estás listo para forjar tu propia historia?
@@ -63,7 +68,7 @@
                     </p>
                 </div>
                 <div class="mode-card">
-                    <h3>SmaugMC (Custom)</h3>
+                    <h3>Smaug (Custom)</h3>
                     <p>
                         La modalidad insignia de nuestro servidor. Adéntrate en un mundo con misiones únicas, jefes épicos,
                         ítems personalizados y eventos que no encontrarás en ningún otro lugar. ¡La verdadera aventura te espera!
@@ -74,7 +79,7 @@
     </main>
     
     <footer>
-        <p>&copy; 2025 SmaugMC | Network. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Smaug | Network. Todos los derechos reservados.</p>
         <p>Un servidor de Minecraft hecho por y para la comunidad.</p>
     </footer>
 
@@ -88,6 +93,8 @@
             });
         }
     </script>
+
+    <script src="js/script.js"></script>
 
 </body>
 </html>
